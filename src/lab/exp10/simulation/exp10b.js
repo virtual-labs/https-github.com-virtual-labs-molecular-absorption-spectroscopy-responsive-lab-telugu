@@ -16,7 +16,7 @@ window.onload = function(){
 
 // This function is called to set the first set of instructions as the page loads.
 function  initialFunction() {
-	document.getElementById('instruction').innerHTML = 'Turn on the spectrophotometer instrument by clicking on the power button and wait for 30 min for initialization of the instrument.';
+	document.getElementById('instruction').innerHTML = 'పవర్ బటన్‌పై క్లిక్ చేయడం ద్వారా స్పెక్ట్రోఫోటోమీటర్ పరికరాన్ని ఆన్ చేయండి మరియు వాయిద్యం ప్రారంభించడానికి 30 నిమిషాలు వేచి ఉండండి.';
 }
 
 //This function is used to add click events to elements
@@ -75,13 +75,13 @@ function showClock(deg) {
 function turnOn() {
 	if(step_no == 0){
 		showClock('360');
-		document.getElementById('instruction').innerHTML='Click on the spectrophotometer lid to open it.';
+		document.getElementById('instruction').innerHTML='తెరవడానికి స్పెక్ట్రోఫోటోమీటర్ మూతపై క్లిక్ చేయండి.';
 		cursorPointers('power_btn', 'spectrometerlid_btn');
 		step_no++;
 	}
 	else if(step_no == 8){
 		showClock('710');
-		document.getElementById('instruction').innerHTML='Take the micropipette by clicking on it.';
+		document.getElementById('instruction').innerHTML='దానిపై క్లిక్ చేసి మైక్రోపిపెట్ తీసుకోండి.';
 		cursorPointers('power_btn', 'pipette');
 		step_no++;
 	}
@@ -90,32 +90,32 @@ function turnOn() {
 function spectrometer() {
 	if(step_no == 1){
 		document.getElementById('spectrometer').src='images/spectrometer_open.png';
-		document.getElementById('instruction').innerHTML ='Click on the cuvette to place it in the sample cell holder of the instrument. One has to use aqueous TX-100 solution as the sample blank or reference in this measurement. Here a double beam spectrophotometer is shown. In this case, one can place the sample in the sample holder(often the front one) and the sample bank or reference in the reference holder(often the back one) simultaneously.';
+		document.getElementById('instruction').innerHTML ='పరికరం యొక్క నమూనా సెల్ హోల్డర్‌లో ఉంచడానికి కువెట్‌పై క్లిక్ చేయండి. ఈ కొలతలో సజల టిఎక్స్ -100 ద్రావణాన్ని నమూనా ఖాళీగా లేదా సూచనగా ఉపయోగించాలి. ఇక్కడ డబుల్ బీమ్ స్పెక్ట్రోఫోటోమీటర్ చూపబడింది. ఈ సందర్భంలో, నమూనాను నమూనా హోల్డర్‌లో (తరచుగా ముందు ఒకటి) మరియు నమూనా బ్యాంక్ లేదా రిఫరెన్స్ హోల్డర్‌లో (తరచుగా వెనుకవైపు) ఒకేసారి ఉంచవచ్చు.';
 		cursorPointers('spectrometerlid_btn', 'purple_solution1');
 		step_no++;
 	}
 	else if(step_no == 3){
 		document.getElementById('spectrometer').src='images/spectrometer.png';
-		document.getElementById('instruction').innerHTML='Run the wavelength scan by clicking on the Computer monitor and then on the ‘Scan’ tab and observe the scan. In the real spectrophotometer, an appropriate wavelength range of incident light for the sample can be chosen and the wavelength scan are run via the accompanied computer software. One can run the scan in absorbance or transmittance mode. The scan data is stored in the computer.If the spectrophotometer is a single beam instrument, then first the sample blank or reference is taken in a cuvette and the wavelength scan is run followed by the sample. One has to subtract the reference data from the sample data for respective wavelengths. Collect data by clicking on the Data tab. Plot the absorbance (and transmittance) of the sample at various wavelengths and determine the wavelength of maximum absorption i.e., spectral peak-position. Colloidal gold particles absorb maximum light near wavelength 520 nm.';
+		document.getElementById('instruction').innerHTML='కంప్యూటర్ మానిటర్‌పై క్లిక్ చేసి, ఆపై ‘స్కాన్’ టాబ్‌పై క్లిక్ చేసి తరంగదైర్ఘ్యం స్కాన్‌ను అమలు చేయండి మరియు స్కాన్‌ను గమనించండి. నిజమైన స్పెక్ట్రోఫోటోమీటర్‌లో, నమూనా కోసం తగిన తరంగదైర్ఘ్యం సంఘటన కాంతిని ఎంచుకోవచ్చు మరియు తరంగదైర్ఘ్యం స్కాన్‌ను కంప్యూటర్ సాఫ్ట్‌వేర్ ద్వారా అమలు చేస్తారు. స్కాన్‌ను శోషణ లేదా ట్రాన్స్మిటెన్స్ మోడ్‌లో అమలు చేయవచ్చు. స్కాన్ డేటా కంప్యూటర్‌లో నిల్వ చేయబడుతుంది. స్పెక్ట్రోఫోటోమీటర్ ఒకే పుంజం పరికరం అయితే, మొదట నమూనా ఖాళీ లేదా సూచనను ఒక కువెట్‌లో తీసుకుంటారు మరియు తరంగదైర్ఘ్యం స్కాన్ నమూనా తరువాత నడుస్తుంది. సంబంధిత తరంగదైర్ఘ్యాల కోసం నమూనా డేటా నుండి సూచన డేటాను తీసివేయాలి. డేటా టాబ్‌పై క్లిక్ చేయడం ద్వారా డేటాను సేకరించండి. వివిధ తరంగదైర్ఘ్యాల వద్ద నమూనా యొక్క శోషణ (మరియు ప్రసారం) ను ప్లాట్ చేయండి మరియు గరిష్ట శోషణ యొక్క తరంగదైర్ఘ్యాన్ని నిర్ణయించండి, అనగా, స్పెక్ట్రల్ పీక్-పొజిషన్. ఘర్షణ బంగారు కణాలు తరంగదైర్ఘ్యం 520 ఎన్ఎమ్ దగ్గర గరిష్ట కాంతిని గ్రహిస్తాయి.';
 		cursorPointers('spectrometerlid_btn', 'computerscreen_btn');
 		step_no++;
 	}
 	else if(step_no == 14 && count == 5){
 		document.getElementById('spectrometer').src='images/spectrometer_open.png';
-		document.getElementById('instruction').innerHTML= 'Click on the cuvette to place it in the sample cell holder of the instrument.One has to use water as the sample blank or reference in this measurement. Here a double beam spectrophotometer is shown. In this case, one can place the sample in the sample holder and the sample bank or reference in the reference holder simultaneously.';
+		document.getElementById('instruction').innerHTML= 'పరికరం యొక్క నమూనా సెల్ హోల్డర్‌లో ఉంచడానికి కువెట్‌పై క్లిక్ చేయండి. ఈ కొలతలో నీటిని నమూనా ఖాళీగా లేదా సూచనగా ఉపయోగించాలి. ఇక్కడ డబుల్ బీమ్ స్పెక్ట్రోఫోటోమీటర్ చూపబడింది. ఈ సందర్భంలో, నమూనా నమూనాను నమూనా హోల్డర్‌లో మరియు నమూనా బ్యాంక్ లేదా రిఫరెన్స్‌ను ఒకేసారి రిఫరెన్స్ హోల్డర్‌లో ఉంచవచ్చు.';
 		cursorPointers('spectrometerlid_btn', 'yellow_solution');
 		step_no++;
 	}
 	else if(step_no == 16){
 		document.getElementById('spectrometer').src='images/spectrometer.png';
-		document.getElementById('instruction').innerHTML= 'Run the scan in the kinetics mode by clicking on the ‘Scan’ button and observe the scan. In the real spectrophotometer, an appropriate wavelength of light is selected (here λ=520 nm) at which increase in absorbance vs. time scan is performed by using the accompanied computer software.';
+		document.getElementById('instruction').innerHTML= '‘స్కాన్’ బటన్‌పై క్లిక్ చేసి గతిశాస్త్ర మోడ్‌లో స్కాన్‌ను అమలు చేయండి మరియు స్కాన్‌ను గమనించండి. నిజమైన స్పెక్ట్రోఫోటోమీటర్‌లో, కాంతి యొక్క సరైన తరంగదైర్ఘ్యం ఎంపిక చేయబడింది (ఇక్కడ λ = 520 nm), దీనితో శోషణ పెరుగుదల వర్సెస్ టైమ్ స్కాన్ తోడు కంప్యూటర్ సాఫ్ట్‌వేర్‌ను ఉపయోగించడం ద్వారా నిర్వహిస్తారు.';
 		cursorPointers('spectrometerlid_btn', 'computerscreen_btn');
 		step_no++;
 	}
 	else if(step_no == 20){
 		document.getElementById('spectrometer').src='images/spectrometer_open.png';
-		document.getElementById('instruction').innerHTML= 'Repeat the above steps and study the developments of Sample 2 and Sample 3 gold particles. Thus one prepares various-sized gold particles depending on the seed particle to Au(III) ion concentration ratio. All the samples left for ~12 hrs before using them as catalysts for eosin reduction. The rate of catalysis was found to be very slow within 3-4 hrs of their preparations.';
-		document.getElementById('Reset_instruction').innerHTML = 'Gold Particle catalyzed Eosin Reduction';
+		document.getElementById('instruction').innerHTML= 'పై దశలను పునరావృతం చేయండి మరియు నమూనా 2 మరియు నమూనా 3 బంగారు కణాల అభివృద్ధిని అధ్యయనం చేయండి. ఈ విధంగా విత్తన కణాన్ని బట్టి u (III) అయాన్ గా ration త నిష్పత్తిని బట్టి వివిధ పరిమాణాల బంగారు కణాలను తయారు చేస్తుంది. అన్ని నమూనాలను ఇయోసిన్ తగ్గింపుకు ఉత్ప్రేరకంగా ఉపయోగించే ముందు ~ 12 గంటలు మిగిలి ఉన్నాయి. వారి సన్నాహాల నుండి 3-4 గంటలలోపు ఉత్ప్రేరక రేటు చాలా నెమ్మదిగా ఉన్నట్లు కనుగొనబడింది.';
+		document.getElementById('Reset_instruction').innerHTML = 'గోల్డ్ పార్టికల్ ఎయోసిన్ తగ్గింపును ఉత్ప్రేరకపరిచింది';
 		document.getElementById('EosinReduction_btn').style.visibility = 'visible';
 		document.getElementById('Eosin').style.visibility = 'visible';
 		document.getElementById('sol_name1').style.visibility = 'visible';
@@ -152,7 +152,7 @@ function purpleSolution() {
 
 		setTimeout(function() {
 			$('#purple_solution1, #ref_cuvette1').css('visibility', 'hidden');
-			document.getElementById('instruction').innerHTML = 'Close the lid by clicking on it.';
+			document.getElementById('instruction').innerHTML = 'దానిపై క్లిక్ చేయడం ద్వారా మూత మూసివేయండి.';
 			cursorPointers('purple_solution1', 'spectrometerlid_btn');
 		}, 3100);
 		step_no++;
@@ -257,17 +257,17 @@ function close() {
 	if(step_no == 6){
 		$('#video1').css('visibility', 'hidden');
 		document.getElementById('particlegrowth_btn').style.visibility = 'visible';
-		document.getElementById('instruction').innerHTML = 'Start Particle Growth Kinetics Measurement';
+		document.getElementById('instruction').innerHTML = 'పార్టికల్ గ్రోత్ కైనటిక్స్ కొలతను ప్రారంభించండి';
 		cursorPointers('close_btn', 'particlegrowth_btn');
 	}
 	else if(step_no == 19){
 		$('#video2, #video3, #video4').css('visibility', 'hidden');
-		document.getElementById('instruction').innerHTML = "Click on the spectrophotometer lid to open it.";
+		document.getElementById('instruction').innerHTML = "తెరవడానికి స్పెక్ట్రోఫోటోమీటర్ మూతపై క్లిక్ చేయండి.";
 		cursorPointers('close_btn', 'spectrometerlid_btn');
 	}
 	else if(step_no == 24){
 		$('#video5, #video6, #video7').css('visibility', 'hidden');
-		document.getElementById('Reset_instruction').innerHTML = "Click on RESET to reset the Experiment";
+		document.getElementById('Reset_instruction').innerHTML = "ప్రయోగాన్ని రీసెట్ చేయడానికి రీసెట్ పై క్లిక్ చేయండి";
 	}
 	step_no++;
 }
@@ -276,7 +276,7 @@ function particleGrowth() {
 	if(step_no == 7){
 		document.getElementById('particlegrowth_btn').style.visibility = 'hidden';
 		document.getElementById('purplesolution2').style.visibility = 'visible';
-		document.getElementById('instruction').innerHTML = 'Turn on the spectrophotometer instrument by clicking on the power button and wait for 30 min for initialization of the instrument.For the preparation of Sample 1 gold particle proceed as follows. ';
+		document.getElementById('instruction').innerHTML = 'పవర్ బటన్‌పై క్లిక్ చేయడం ద్వారా స్పెక్ట్రోఫోటోమీటర్ పరికరాన్ని ఆన్ చేయండి మరియు వాయిద్యం ప్రారంభించడానికి 30 నిమిషాలు వేచి ఉండండి. నమూనా 1 బంగారు కణాల తయారీకి ఈ క్రింది విధంగా కొనసాగండి.';
 		cursorPointers('particlegrowth_btn', 'power_btn');
 		step_no++;
 	}
@@ -285,7 +285,7 @@ function particleGrowth() {
 function pipette() {
 	if(step_no == 9){
 		animateStraight('pipette', '+=53', '+=20');
-		document.getElementById('instruction').innerHTML = 'Click on the micropipette again to collect the required quantity of seed solution.';
+		document.getElementById('instruction').innerHTML = 'విత్తన ద్రావణంలో అవసరమైన పరిమాణాన్ని సేకరించడానికి మైక్రోపిపెట్‌పై మళ్లీ క్లిక్ చేయండి.';
 		step_no++;
 		setTimeout(function(){
 			count++;
@@ -294,7 +294,7 @@ function pipette() {
 	else if(step_no == 10 && count == 1){
 		document.getElementById('pipette').src = 'images/pipette_with_sol.png';
 		document.getElementById('purplesolution2').src = 'images/half_filled_purple_sol.png';
-		document.getElementById('instruction').innerHTML = 'Add the seed solution from micropipette to the required quantity of Au(III) ion solution in the cuvette by clicking on the pipette once again.';
+		document.getElementById('instruction').innerHTML = 'మరోసారి పైపెట్‌పై క్లిక్ చేయడం ద్వారా క్యూపెట్‌లో అవసరమైన పరిమాణంలో u (III) అయాన్ ద్రావణానికి మైక్రోపిపెట్ నుండి విత్తన ద్రావణాన్ని జోడించండి.';
 		step_no++;
 		setTimeout(function(){
 			count++;
@@ -314,7 +314,7 @@ function pipette() {
 		document.getElementById('pipette').src = 'images/pipette_with_sol.png';
 		document.getElementById('yellow_solution').src = 'images/yellow_sol.png';
 		animateStraight('pipette', '-=54', '-=10');
-		document.getElementById('instruction').innerHTML = 'Add 0.04 mL 10-2 M ascorbic acid at a time (not drop by drop) by clicking on the ascorbic acid solution.Immediately after addition of ascorbic acid, the kinetics of the particle development from the seed should be followed by following the increase in absorbance value at λ=520 nm with time (at 331°C). ';
+		document.getElementById('instruction').innerHTML = 'ఆస్కార్బిక్ ఆమ్ల ద్రావణంపై క్లిక్ చేయడం ద్వారా ఒకేసారి 0.04 mL 10-2 M ఆస్కార్బిక్ ఆమ్లాన్ని జోడించండి. ఆస్కార్బిక్ ఆమ్లం కలిపిన వెంటనే, విత్తనం నుండి కణాల అభివృద్ధి యొక్క గతిశాస్త్రం పెరుగుదల తరువాత అనుసరించాలి శోషక విలువ సమయంతో λ = 520 nm వద్ద (331 at C వద్ద). ';
 		step_no++;
 		setTimeout(function(){
 			cursorPointers('pipette', 'ascorbic_acid');
@@ -370,7 +370,7 @@ function ascorbicAcid() {
 
 		setTimeout(function(){
 			animateStraight('pipette', '-=53', '-=8');
-			document.getElementById('instruction').innerHTML= 'Click on the spectrophotometer lid to open it.';
+			document.getElementById('instruction').innerHTML= 'తెరవడానికి స్పెక్ట్రోఫోటోమీటర్ మూతపై క్లిక్ చేయండి.';
 			cursorPointers('pipette', 'spectrometerlid_btn');
 		}, 5000);
 
@@ -400,7 +400,7 @@ function yellowSolution() {
 
 		setTimeout(function() {
 			$('#yellow_solution, #grey_solution').css('visibility', 'hidden');
-			document.getElementById('instruction').innerHTML = 'Close the chamber lid by clicking on it.';
+			document.getElementById('instruction').innerHTML = 'ఛాంబర్ మూతపై క్లిక్ చేయడం ద్వారా దాన్ని మూసివేయండి.';
 			cursorPointers('yellow_solution', 'spectrometerlid_btn');
 		}, 3100);
 		step_no++;

@@ -51,7 +51,7 @@ function beaker() {
         // Move the beaker image to desired position.
         moveImage();
         // Change to next intsruction to be followed.   
-        document.getElementById("demo").innerHTML = "Step-No 3: Click on the conical flask to take it to experiment table";
+        document.getElementById("demo").innerHTML = "దశ-సంఖ్య 3: శంఖాకార ఫ్లాస్క్‌ను క్లిక్ చేసి ప్రయోగాత్మక పట్టికకు తీసుకెళ్లండి";
         $("#solution").prop("disabled", true);
         document.getElementById("solution").style.opacity = "0.4";
         cursorPointers('beaker', 'flask');
@@ -77,13 +77,13 @@ function flask() {
         // Move the flask image to desired position.
         moveImage();
         // Change to next intsruction to be followed.
-        document.getElementById("demo").innerHTML = "Step-No 4: Click on the conical flask to pour the solution into clean, dry beaker";
+        document.getElementById("demo").innerHTML = "దశ-సంఖ్య 4: శుభ్రమైన, పొడి బీకర్‌లో ద్రావణాన్ని పోయడానికి శంఖాకార ఫ్లాస్క్‌పై క్లిక్ చేయండి";
         step_no ++;
     }
     else if(step_no==3 && count == 2){
         document.getElementById("flask").onclick = moveFlask();
         // Change to next instruction to be followed. 
-        document.getElementById("demo").innerHTML = "Step-No 5: Click on the micropipette to collect appropriate quantity of solution from the beaker";
+        document.getElementById("demo").innerHTML = "దశ-సంఖ్య 5: బీకర్ నుండి తగిన పరిమాణంలో ద్రావణాన్ని సేకరించడానికి మైక్రోపిపెట్ పై క్లిక్ చేయండి";
         step_no++;
     }
 }
@@ -205,20 +205,20 @@ function pipette() {
         // Move it to the table
         moveImage();
         // Change to next instruction to be followed. 
-        document.getElementById("demo").innerHTML = "Step-No 5: Click on the micropipette to collect appropriate quantity of solution from the beaker";
+        document.getElementById("demo").innerHTML = "దశ-సంఖ్య 5: బీకర్ నుండి తగిన పరిమాణంలో ద్రావణాన్ని సేకరించడానికి మైక్రోపిపెట్ పై క్లిక్ చేయండి";
         step_no ++;
     }
     else if(step_no==5 && count == 5){
         fillPipette();
         // Change to next instruction to be followed.
-        document.getElementById("demo").innerHTML = "Step-No 6: Take cuvette by clicking on it";
+        document.getElementById("demo").innerHTML = "దశ-సంఖ్య 6: దానిపై క్లిక్ చేయడం ద్వారా కువెట్టే తీసుకోండి";
         step_no ++;
     }
 
     else if(step_no==7 && count == 7){
         movePipette();
         // Change to next instruction to be followed.
-        document.getElementById("demo").innerHTML = "Step-No 8:Click on the spectrophotometer lid to open it ";
+        document.getElementById("demo").innerHTML = "దశ-సంఖ్య 8: తెరవడానికి స్పెక్ట్రోఫోటోమీటర్ మూతపై క్లిక్ చేయండి";
         step_no++;
     }
 }
@@ -295,7 +295,7 @@ function cuvette(){
         // Move it to the table.
         moveImage();
         // Change the next instruction to be followed.
-        document.getElementById("demo").innerHTML = "Step-No 7: Pour the solution from the micropipette into the cuvette by clicking on the cuvette(In actual measurements the cuvette is filled to two-third of its volume)";
+        document.getElementById("demo").innerHTML = "దశ-సంఖ్య 7: కువెట్‌పై క్లిక్ చేయడం ద్వారా మైక్రోపిపెట్ నుండి క్యూవెట్‌లోకి ద్రావణాన్ని పోయండి (వాస్తవ కొలతలలో క్యూట్ దాని వాల్యూమ్‌లో మూడింట రెండు వంతుల వరకు నిండి ఉంటుంది)";
         cursorPointers('cuvette','pipette');
         step_no++;
     }

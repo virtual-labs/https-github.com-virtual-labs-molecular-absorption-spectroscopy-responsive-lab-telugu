@@ -38,7 +38,7 @@ window.onload = function(){
 manual button and also sets the first set of instructions. */
 function initial_function(){
     // Intial intrsuction to be followed
-    document.getElementById("demo").innerHTML = "Step-No 1:Prepare a standard K2Cr2O7 aqueous solution of strength nearly 3×10<sub>-3</sub> M in 0.01 N H2SO4 (for the experiments described here we have used a solution of strength = 3.16×10<sub>-3</sub>M. This is used as stock solution.Switch on the computer and the instrument powers; wait for 30 minutes for ‘warm-up’ of the instrument. ";
+    document.getElementById("demo").innerHTML = "దశ-సంఖ్య 1: 0.01 N H2SO4 లో దాదాపు 3 × 10 <sub> -3 </sub> M యొక్క ప్రామాణిక K2Cr2O7 సజల ద్రావణాన్ని సిద్ధం చేయండి (ఇక్కడ వివరించిన ప్రయోగాల కోసం మేము బలం యొక్క పరిష్కారాన్ని ఉపయోగించాము = 3.16 × 10 <ఉప > -3 </sub> M. ఇది స్టాక్ సొల్యూషన్‌గా ఉపయోగించబడుతుంది. కంప్యూటర్ మరియు ఇన్స్ట్రుమెంట్ పవర్స్‌పై మారండి; పరికరం యొక్క 'సన్నాహక' కోసం 30 నిమిషాలు వేచి ఉండండి.";
     var modal = document.getElementById('manual');
     // Get the button that opens the manual modal
     var btn = document.getElementById("manual_button");
@@ -281,7 +281,7 @@ function showClock(){
 function removeClock() {
     $('#clockHand, #clockScreen').remove();
     //Change to next intsruction to be followed.
-    document.getElementById("demo").innerHTML = "Step-No 2: Click on the beaker to take a clean, dry beaker.";
+    document.getElementById("demo").innerHTML = "దశ-సంఖ్య 2: శుభ్రమైన, పొడి బీకర్ తీసుకోవడానికి బీకర్‌పై క్లిక్ చేయండి.";
     cursorPointers('power_trans_button', 'beaker');
 }
 
@@ -293,7 +293,7 @@ function spectrophotometer(){
         // Replace the spectrophotometer images with the open spectrophotometer images
         images[0] = "images/spec_open.png";
         images[1] = "images/spec_open.png";
-        document.getElementById("demo").innerHTML = "Step-No 9: Click on the cuvette to place it in the sample holder. One has to use water as the sample bank or reference in this measurement. Here a double beam spectrophotometer is shown.In this case one can place the sample in the sample holder(often the front one) and sample bank or reference in the reference holder(often the back one) simultaneously.";
+        document.getElementById("demo").innerHTML = "దశ-సంఖ్య 9: నమూనా హోల్డర్‌లో ఉంచడానికి కువెట్‌పై క్లిక్ చేయండి. ఈ కొలతలో నీటిని నమూనా బ్యాంకుగా లేదా సూచనగా ఉపయోగించాలి. ఇక్కడ డబుల్ బీమ్ స్పెక్ట్రోఫోటోమీటర్ చూపబడింది. ఈ సందర్భంలో నమూనా నమూనాను నమూనా హోల్డర్‌లో (తరచుగా ముందు ఒకటి) మరియు నమూనా బ్యాంక్ లేదా రిఫరెన్స్ హోల్డర్‌లో (తరచుగా వెనుకవైపు) ఒకేసారి ఉంచవచ్చు.";
         step_no++;
         cursorPointers('spectrolid_trans_button', 'cuvette');
     }
@@ -301,7 +301,7 @@ function spectrophotometer(){
         // Replace the spectrophotometer images with the closed spectrophotmeter images.
         images[0] = "images/spec_close.png";
         images[1] = "images/spec_close1.png";
-        document.getElementById("demo").innerHTML = "Step-No 10: Run the wavelength scan by clicking on the computer monitor and then on the scan button and observe the wavelength scan";
+        document.getElementById("demo").innerHTML = "దశ-సంఖ్య 10: కంప్యూటర్ మానిటర్‌పై క్లిక్ చేసి, ఆపై స్కాన్ బటన్‌పై క్లిక్ చేసి తరంగదైర్ఘ్యం స్కాన్‌ను అమలు చేయండి మరియు తరంగదైర్ఘ్యం స్కాన్‌ను గమనించండి";
         step_no++;
         cursorPointers('spectrolid_trans_button', 'comp_trans_button');
     }
@@ -385,6 +385,6 @@ function disposeGraph(){
         video is made hidden.*/
         $('#scan, .video').css('visibility', 'hidden');
         document.getElementById('disposegraph').style.cursor = 'default';
-        document.getElementById('demo').innerHTML= ' Click on Reset button to start new measurement.Repeat the measurement with next higher concentration and so on.';
+        document.getElementById('demo').innerHTML= 'క్రొత్త కొలతను ప్రారంభించడానికి రీసెట్ బటన్ పై క్లిక్ చేయండి. తదుపరి అధిక ఏకాగ్రతతో కొలతను పునరావృతం చేయండి.';
     }
 }

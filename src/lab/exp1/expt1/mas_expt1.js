@@ -51,7 +51,7 @@ function initial_function(){
             }
     });
     // Intial intrsuction to be followed
-    document.getElementById("demo").innerHTML = "Step-No 1: Prepare following two solutions: a)~0.001M of potassium dichromate (K2Cr2O7) and b) ~5mg/L caffeine in distilled water. Here the solutions are shown in two volumetric flasks. One can select a solution for measurement by clicking on desired solution from the dropdown menu. Turn on the instrument clicking on the power button and wait for 30 min for initialization of the instrument.";
+    document.getElementById("demo").innerHTML = "దశ-సంఖ్య 1: ఈ క్రింది రెండు పరిష్కారాలను సిద్ధం చేయండి: ఎ) ~0.001M పొటాషియం డైక్రోమేట్ (K2Cr2O7) మరియు బి) స్వేదనజలంలో ~ 5mg / L కెఫిన్. ఇక్కడ పరిష్కారాలు రెండు వాల్యూమెట్రిక్ ఫ్లాస్క్‌లలో చూపించబడ్డాయి. డ్రాప్‌డౌన్ మెను నుండి కావలసిన పరిష్కారంపై క్లిక్ చేయడం ద్వారా కొలత కోసం ఒక పరిష్కారాన్ని ఎంచుకోవచ్చు. పవర్ బటన్‌పై క్లిక్ చేసే పరికరాన్ని ఆన్ చేసి, వాయిద్యం ప్రారంభించడానికి 30 నిమిషాలు వేచి ఉండండి.";
     var modal = document.getElementById('manual');
     // Get the button that opens the manual modal
     var btn = document.getElementById("manual_button");
@@ -186,7 +186,7 @@ function showClock(){
 function removeClock() {
     $('#clockHand, #clockScreen').remove();
     //Change to next intsruction to be followed.
-    document.getElementById("demo").innerHTML = "Step-No 2: Click on the beaker to take clean, dry beaker";
+    document.getElementById("demo").innerHTML = "దశ-సంఖ్య 2: శుభ్రమైన, పొడి బీకర్ తీసుకోవడానికి బీకర్‌పై క్లిక్ చేయండి";
     cursorPointers('power_trans_button', 'beaker');
 }
 
@@ -197,7 +197,7 @@ function spectrophotometer(){
         // Replace the spectrophotometer images with the open spectrophotometer images
         images[0] = "images/spec_open.png";
         images[1] = "images/spec_open1.png";
-        document.getElementById("demo").innerHTML = "Step-No 9: Click on the cuvette to place it in the sample holder. One has to use water as the sample bank or reference in this measurement. Here a double beam spectrophotometer is shown.In this case one can place the sample in the sample holder(often the front one) and sample bank or reference in the reference holder(often the back one simultaneously.";
+        document.getElementById("demo").innerHTML = "దశ-సంఖ్య 9: నమూనా హోల్డర్‌లో ఉంచడానికి కువెట్‌పై క్లిక్ చేయండి. ఈ కొలతలో నీటిని నమూనా బ్యాంకుగా లేదా సూచనగా ఉపయోగించాలి. ఇక్కడ డబుల్ బీమ్ స్పెక్ట్రోఫోటోమీటర్ చూపబడింది. ఈ సందర్భంలో నమూనా శాంపిల్ హోల్డర్‌లో (తరచుగా ముందు ఒకటి) మరియు నమూనా బ్యాంక్ లేదా రిఫరెన్స్ హోల్డర్‌లో రిఫరెన్స్ (తరచుగా వెనుకవైపు ఒకేసారి) ఉంచవచ్చు.";
         cursorPointers('spectrolid_trans_button', 'cuvette');
         step_no++;
     }
@@ -205,7 +205,7 @@ function spectrophotometer(){
         // Replace the spectrophotometer images with the closed spectrophotmeter images.
         images[0] = "images/spec_close.png";
         images[1] = "images/spec_close1.png";
-        document.getElementById("demo").innerHTML = "Step-No 10: Run the wavelength scan by clicking on the computer monitor and then on the scan button and observe the wavelength scan";
+        document.getElementById("demo").innerHTML = "దశ-సంఖ్య 10: కంప్యూటర్ మానిటర్‌పై క్లిక్ చేసి, ఆపై స్కాన్ బటన్‌పై క్లిక్ చేసి తరంగదైర్ఘ్యం స్కాన్‌ను అమలు చేయండి మరియు తరంగదైర్ఘ్యం స్కాన్‌ను గమనించండి";
         cursorPointers('spectrolid_trans_button', 'comp_trans_button');
         step_no++;
     }
@@ -217,10 +217,10 @@ function scan(){
         // After the cuvette are inserted into the spectrophotometer, when the computer in pressed to scan, depending on the cuvette choosen appropriate graph video is obtained.
         $(".data_validation, #instruction_bkgd, #graph_instruction").css("visibility", "visible");
         if(choosen_solution == "potassium"){
-            document.getElementById("graph_instruction").innerHTML = "On the screen enter the wavelength range of spectral scan. For K2Cr2O7: start: 700 nm End: 325 nm. In real operation, the wavelength range of incident light for the sample is chosen and the wavelength scan is run via the accompanied computer software. One can run the scan in absorbance (A)  or transmittance (%T) mode. Click on the green 'start' button on the measurement set-up screen to run the wavelength scan. Observe the wavelength scan. If the spectrophotometer is a single beam instrument, then first the sample blank or reference is taken in a cuvette and the wavelength scan is run followed by the sample. One has to subtract the reference data from the sample data for respective wavelengths";
+            document.getElementById("graph_instruction").innerHTML = "తెరపై స్పెక్ట్రల్ స్కాన్ యొక్క తరంగదైర్ఘ్యం పరిధిని నమోదు చేయండి. K2Cr2O7 కోసం: ప్రారంభం: 700 nm ముగింపు: 325 nm. నిజమైన ఆపరేషన్‌లో, నమూనా కోసం సంఘటన కాంతి యొక్క తరంగదైర్ఘ్యం పరిధి ఎంచుకోబడుతుంది మరియు తరంగదైర్ఘ్యం స్కాన్ కంప్యూటర్ సాఫ్ట్‌వేర్ ద్వారా నడుస్తుంది. ఒకరు స్కాన్‌ను శోషక (ఎ) లేదా ట్రాన్స్మిటెన్స్ (% టి) మోడ్‌లో అమలు చేయవచ్చు. తరంగదైర్ఘ్యం స్కాన్‌ను అమలు చేయడానికి కొలత సెటప్ స్క్రీన్‌పై ఆకుపచ్చ 'ప్రారంభ' బటన్‌పై క్లిక్ చేయండి. తరంగదైర్ఘ్యం స్కాన్‌ను గమనించండి. స్పెక్ట్రోఫోటోమీటర్ ఒకే పుంజం పరికరం అయితే, మొదట నమూనా ఖాళీ లేదా సూచనను ఒక కువెట్‌లో తీసుకుంటారు మరియు తరంగదైర్ఘ్యం స్కాన్ నమూనా తరువాత నడుస్తుంది. సంబంధిత తరంగదైర్ఘ్యాల కోసం నమూనా డేటా నుండి సూచన డేటాను తీసివేయాలి";
             step_no++;
         }else if(choosen_solution == "caffeine"){
-            document.getElementById("graph_instruction").innerHTML = "On the screen enter the wavelength range of spectral scan. For caffeine: start: 590 nm End: 290 nm. In real operation, the wavelength range of incident light for the sample is chosen and the wavelength scan is run via the accompanied computer software. One can run the scan in absorbance (A)  or transmittance (%T) mode. Click on the green 'start' button on the measurement set-up screen to run the wavelength scan. Observe the wavelength scan. If the spectrophotometer is a single beam instrument, then first the sample blank or reference is taken in a cuvette and the wavelength scan is run followed by the sample. One has to subtract the reference data from the sample data for respective wavelengths";
+            document.getElementById("graph_instruction").innerHTML = "తెరపై స్పెక్ట్రల్ స్కాన్ యొక్క తరంగదైర్ఘ్యం పరిధిని నమోదు చేయండి. కెఫిన్ కోసం: ప్రారంభం: 590 ఎన్ఎమ్ ముగింపు: 290 ఎన్ఎమ్. నిజమైన ఆపరేషన్‌లో, నమూనా కోసం సంఘటన కాంతి యొక్క తరంగదైర్ఘ్యం పరిధి ఎంచుకోబడుతుంది మరియు తరంగదైర్ఘ్యం స్కాన్ కంప్యూటర్ సాఫ్ట్‌వేర్ ద్వారా నడుస్తుంది. ఒకరు స్కాన్‌ను శోషక (ఎ) లేదా ట్రాన్స్మిటెన్స్ (% టి) మోడ్‌లో అమలు చేయవచ్చు. తరంగదైర్ఘ్యం స్కాన్‌ను అమలు చేయడానికి కొలత సెటప్ స్క్రీన్‌పై ఆకుపచ్చ 'ప్రారంభ' బటన్‌పై క్లిక్ చేయండి. తరంగదైర్ఘ్యం స్కాన్‌ను గమనించండి. స్పెక్ట్రోఫోటోమీటర్ ఒకే పుంజం పరికరం అయితే, మొదట నమూనా ఖాళీ లేదా సూచనను ఒక కువెట్‌లో తీసుకుంటారు మరియు తరంగదైర్ఘ్యం స్కాన్ నమూనా తరువాత నడుస్తుంది. సంబంధిత తరంగదైర్ఘ్యాల కోసం నమూనా డేటా నుండి సూచన డేటాను తీసివేయాలి";
             step_no++;
         }
         cursorPointers('comp_trans_button', 'start_btn');
@@ -236,7 +236,7 @@ function startBtn(){
         if(choosen_solution== "potassium" &&  input1 == 700 && input2 == 325){
             $(".data_validation").css("visibility", "hidden");
             $("#scan, #video1").css("visibility", "visible");
-            document.getElementById("graph_instruction").innerHTML = "Step-No 14:Click on the close button when the spectral scal is complete. In real operation, the scan data are stored in the computer. The instrument stores data and therefore asks for the Sample File name. One enters a file name to save the data.";
+            document.getElementById("graph_instruction").innerHTML = "";
             video1.play();
             step_no++;
             cursorPointers('start_btn', 'disposegraph');
@@ -244,7 +244,7 @@ function startBtn(){
         else if(choosen_solution == "caffeine" && input1 == 590 && input2 == 290){
             $(".data_validation").css("visibility", "hidden");
             $("#scan, #video2").css("visibility", "visible");
-            document.getElementById("graph_instruction").innerHTML = "Step-No 14:Click on the close button when the spectral scal is complete. In real operation, the scan data are stored in the computer. The instrument stores data and therefore asks for the Sample File name. One enters a file name to save the data.";
+            document.getElementById("graph_instruction").innerHTML = "దశ-సంఖ్య 14: స్పెక్ట్రల్ స్కేల్ పూర్తయినప్పుడు క్లోజ్ బటన్ పై క్లిక్ చేయండి. నిజమైన ఆపరేషన్‌లో, స్కాన్ డేటా కంప్యూటర్‌లో నిల్వ చేయబడుతుంది. వాయిద్యం డేటాను నిల్వ చేస్తుంది మరియు అందువల్ల నమూనా ఫైల్ పేరును అడుగుతుంది. డేటాను సేవ్ చేయడానికి ఒకరు ఫైల్ పేరును నమోదు చేస్తారు.";
             video2.play();
             step_no++;
             cursorPointers('start_btn', 'disposegraph');
@@ -260,10 +260,10 @@ function disposeGraph(){
     // After playing the graph plotting video close option is choosen, the background scan image and the video is made hidden.
         $('.video, .common').css('visibility', 'hidden');
         if(choosen_solution == "potassium") {
-            document.getElementById('demo').innerHTML = 'Reset to repeat the measurement for another sample.';
+            document.getElementById('demo').innerHTML = 'మరొక నమూనా కోసం కొలతను పునరావృతం చేయడానికి రీసెట్ చేయండి.';
         }
         else if(choosen_solution == "caffeine") {
-            document.getElementById('demo').innerHTML = 'Collect data by clicking on the Data tab.';
+            document.getElementById('demo').innerHTML = 'డేటా టాబ్‌పై క్లిక్ చేయడం ద్వారా డేటాను సేకరించండి.';
         }
     }   
 }

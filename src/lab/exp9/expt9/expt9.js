@@ -37,7 +37,7 @@ window.onload = function(){
 manual button and also sets the first set of instructions. */
 function initial_function(){
     // Intial intrsuction to be followed
-    document.getElementById("demo").innerHTML = "Step-No 1: Prepare the following solutions: (i) a 0.5g/L methyl orange solution by dissolving 0.05 g methyl orange in 100 mL distilled water; (ii) a 0.2 M disodium hydrogen orthophosphate (Na<sub>2</sub>HPO<sub>4</sub>) solution by dissolving 5.68 g Na<sub>2</sub>HPO<sub>4</sub> in 200 mL distilled water; and (iii) a 0.1 M citric acid solution by dissolving 9.61 g citric acid in 500 mL distilled water. Prepare eight buffer solutions by mixing varying amounts of the Na<sub>2</sub>HPO<sub>4</sub> solution and the citric acid solution as given in Table 1. Divide each buffer solution into two equal portions of 25 mL volume. Add 0.5 mL of methyl orange solution to one 25 mL portion of each buffer solution. Absorbance measurements of the buffer solutions containing the methyl orange indicator have to be carried out against the other portions of buffer as the reference or sample blank. These sample solutions are shown on a selection scale. Switch on the computer and the instrument powers; wait for 30 minutes for ‘warm-up’ of the instrument.";
+    document.getElementById("demo").innerHTML = "దశ-సంఖ్య 1: కింది పరిష్కారాలను సిద్ధం చేయండి: (i) 100 గ్రా స్వేదనజలంలో 0.05 గ్రా మిథైల్ నారింజను కరిగించడం ద్వారా 0.5 గ్రా / ఎల్ మిథైల్ ఆరెంజ్ ద్రావణం; (ii) 5.68 గ్రా Na <sub> 2 </sub> HPO <sub> 4 </ కరిగించడం ద్వారా 0.2 M డిసోడియం హైడ్రోజన్ ఆర్థోఫాస్ఫేట్ (Na <sub> 2 </sub> HPO <sub> 4 </sub>) పరిష్కారం ఉప> 200 ఎంఎల్ స్వేదనజలంలో; మరియు (iii) 500 ఎంఎల్ స్వేదనజలంలో 9.61 గ్రా సిట్రిక్ ఆమ్లాన్ని కరిగించడం ద్వారా 0.1 ఎం సిట్రిక్ యాసిడ్ ద్రావణం. Na <sub> 2 </sub> HPO <sub> 4 </sub> ద్రావణం మరియు టేబుల్ 1 లో ఇచ్చిన విధంగా సిట్రిక్ యాసిడ్ ద్రావణాన్ని కలపడం ద్వారా ఎనిమిది బఫర్ పరిష్కారాలను సిద్ధం చేయండి. ప్రతి బఫర్ ద్రావణాన్ని రెండు సమాన భాగాలుగా 25 గా విభజించండి mL వాల్యూమ్. ప్రతి బఫర్ ద్రావణంలో ఒక 25 ఎంఎల్ భాగానికి 0.5 ఎంఎల్ మిథైల్ ఆరెంజ్ ద్రావణాన్ని జోడించండి. మిథైల్ ఆరెంజ్ సూచికను కలిగి ఉన్న బఫర్ పరిష్కారాల శోషణ కొలతలు బఫర్ యొక్క ఇతర భాగాలకు సూచనగా లేదా నమూనా ఖాళీగా నిర్వహించాలి. ఈ నమూనా పరిష్కారాలు ఎంపిక స్థాయిలో చూపబడతాయి. కంప్యూటర్ మరియు పరికర శక్తులపై మారండి; పరికరం యొక్క ‘సన్నాహక’ కోసం 30 నిమిషాలు వేచి ఉండండి.";
     var modal = document.getElementById('manual');
     // Get the button that opens the manual modal
     var btn = document.getElementById("manual_button");
@@ -181,7 +181,7 @@ function showClock(){
 function removeClock() {
     $('#clockHand, #clockScreen').remove();
     //Change to next intsruction to be followed.
-    document.getElementById("demo").innerHTML = "Step-No 2: Click on the beaker to take a clean, dry beaker.";
+    document.getElementById("demo").innerHTML = "దశ-సంఖ్య 2: శుభ్రమైన, పొడి బీకర్ తీసుకోవడానికి బీకర్‌పై క్లిక్ చేయండి.";
     cursorPointers('power_trans_button', 'beaker');
 }
 
@@ -235,7 +235,7 @@ function moveBeaker()
     // Change to next intsruction to be followed.
     document.getElementById("slider").disabled = true;
     document.getElementById("slider").style.opacity ="0.4";
-    document.getElementById("demo").innerHTML = "Step-No 3: Click on the buffer solution to take to experiment table.";
+    document.getElementById("demo").innerHTML = "దశ-సంఖ్య 3: ప్రయోగ పట్టికకు తీసుకోవడానికి బఫర్ పరిష్కారంపై క్లిక్ చేయండి.";
     cursorPointers('beaker', 'flask');
     step_no++;
   }
@@ -259,12 +259,12 @@ function moveFlask() {
     // Move the flask image to desired position.
     moveImage();
     // Change to next intsruction to be followed.
-    document.getElementById("demo").innerHTML = "Step-No 4: Click on the buffer solution to pour the solution into the clean, dry beaker.";
+    document.getElementById("demo").innerHTML = "దశ-సంఖ్య 4: శుభ్రమైన, పొడి బీకర్‌లో ద్రావణాన్ని పోయడానికి బఫర్ ద్రావణంపై క్లిక్ చేయండి.";
     step_no++;
   }
   else if(step_no==3 && count == 2){
     document.getElementById("flask").onclick = pourFlask();
-    document.getElementById("demo").innerHTML = "Step-No 5: Click on the bigger pipette to collect 0.5 ml methylorange solution from the volumetric flask (kept on the shelf).";
+    document.getElementById("demo").innerHTML = "దశ-సంఖ్య 5: వాల్యూమెట్రిక్ ఫ్లాస్క్ (షెల్ఫ్‌లో ఉంచబడినది) నుండి 0.5 మి.లీ మిథైలోరేంజ్ ద్రావణాన్ని సేకరించడానికి పెద్ద పైపెట్‌పై క్లిక్ చేయండి.";
     step_no++;
   }
 }
@@ -384,7 +384,7 @@ function movePipette() {
     // Move it to the methyl orange solution
     moveImage();
     // Change to next instruction to be followed. 
-    document.getElementById("demo").innerHTML = "Step-No 5: Click on the bigger pipette to collect 0.5 ml methylorange solution from the volumetric flask (kept on the shelf).";
+    document.getElementById("demo").innerHTML = "దశ-సంఖ్య 5: వాల్యూమెట్రిక్ ఫ్లాస్క్ (షెల్ఫ్‌లో ఉంచబడినది) నుండి 0.5 మి.లీ మిథైలోరేంజ్ ద్రావణాన్ని సేకరించడానికి పెద్ద పైపెట్‌పై క్లిక్ చేయండి.";
     step_no++;
   }
   else if(step_no==5 && count == 5){
@@ -394,7 +394,7 @@ function movePipette() {
       count++;
     }, 500);
     // Change to next instruction to be followed.
-    document.getElementById("demo").innerHTML = "Step-No 6: Again click on the bigger pipette now, to add the 0.5ml of methylorange solution to the beaker on the table below.";
+    document.getElementById("demo").innerHTML = "దశ-సంఖ్య 6: దిగువ పట్టికలో ఉన్న బీకర్‌కు 0.5 మి.లీ మిథైలోరేంజ్ ద్రావణాన్ని జోడించడానికి ఇప్పుడు పెద్ద పైప్‌పై క్లిక్ చేయండి.";
     step_no++;
   }
   else if(step_no==6 && count == 6){
@@ -411,7 +411,7 @@ function movePipette() {
     // Move it to the beaker
     moveImage();
     // Change to next instruction to be followed.
-    document.getElementById("demo").innerHTML = "Step-No 6: Again click on the bigger pipette now, to add the 0.5ml of methylorange solution to the beaker on the table below.";
+    document.getElementById("demo").innerHTML = "దశ-సంఖ్య 6: దిగువ పట్టికలో ఉన్న బీకర్‌కు 0.5 మి.లీ మిథైలోరేంజ్ ద్రావణాన్ని జోడించడానికి ఇప్పుడు పెద్ద పైప్‌పై క్లిక్ చేయండి.";
     step_no++;
   }
   else if(step_no==7 && count == 7){
@@ -456,7 +456,7 @@ function movePipette() {
     // Move it to the shelf
     moveImage();
     // Change to next instruction to be followed.
-    document.getElementById("demo").innerHTML = "Step-No 7: Click on the micropipette to collect appropriate quantity of solution from the beaker.";
+    document.getElementById("demo").innerHTML = "దశ-సంఖ్య 7: బీకర్ నుండి తగిన పరిమాణంలో ద్రావణాన్ని సేకరించడానికి మైక్రోపిపెట్ పై క్లిక్ చేయండి.";
     cursorPointers('pipette', 'micro_pipette');
     step_no++;
   }
@@ -488,7 +488,7 @@ function moveMicropipette() {
       img = document.getElementById("micro_pipette");
       img.src = "images/micro_pipette_filled.png";
       // Change to next instruction to be followed.
-      document.getElementById("demo").innerHTML = "Step-No 8: Take cuvette by clicking on it";
+      document.getElementById("demo").innerHTML = "దశ-సంఖ్య 8: దానిపై క్లిక్ చేయడం ద్వారా కువెట్టే తీసుకోండి";
       cursorPointers('micro_pipette', 'cuvette')
       step_no++;
   }
@@ -548,7 +548,7 @@ function moveMicropipette() {
     type_of_movement = 1;
     // Move it to the shelf
     moveImage();
-    document.getElementById("demo").innerHTML = "Step-No 10: Click on the spectrophotometer lid to open it.";
+    document.getElementById("demo").innerHTML = "దశ-సంఖ్య 10: తెరవడానికి స్పెక్ట్రోఫోటోమీటర్ మూతపై క్లిక్ చేయండి.";
     cursorPointers('micro_pipette', 'spectrolid_trans_button');
     step_no++;
   }
@@ -574,7 +574,7 @@ function moveCuvette() {
     // Move it to the table.
     moveImage();
     // Change the next instruction to be followed.
-    document.getElementById("demo").innerHTML = "Step-No 9: Pour the solution from the micropipette into the cuvette by clicking on the cuvette(In actual measurements the cuvette is filled to two-third of its volume)";
+    document.getElementById("demo").innerHTML = "దశ-సంఖ్య 9: కువెట్‌పై క్లిక్ చేయడం ద్వారా మైక్రోపిపెట్ నుండి క్యూవెట్‌లోకి ద్రావణాన్ని పోయండి (వాస్తవ కొలతలలో కువెట్ దాని వాల్యూమ్‌లో మూడింట రెండు వంతుల వరకు నిండి ఉంటుంది)";
     cursorPointers('cuvette', 'micro_pipette');
     step_no++;
   }
@@ -594,7 +594,7 @@ function moveCuvette() {
     moveImage();
     // After 1500ms call moveDown() method.
     setTimeout("moveDown()",1500);
-    document.getElementById("demo").innerHTML = "Step-No 12: Click on the spectrophotometer lid to close it.";
+    document.getElementById("demo").innerHTML = "దశ-సంఖ్య 12: దాన్ని మూసివేయడానికి స్పెక్ట్రోఫోటోమీటర్ మూతపై క్లిక్ చేయండి.";
     step_no++;
   }
 }
@@ -647,7 +647,7 @@ function spectrophotometer(){
     // Replace the spectrophotometer images with the open spectrophotometer images
     images[0] = "images/spec_open.png";
     images[1] = "images/spec_open.png";
-    document.getElementById("demo").innerHTML = "Step-No 11: Click on the cuvette to place it in the sample holder. One has to use water as the sample blank or reference in this measurement. Here a double beam spectrophotometer is shown. In this case, one can place the sample in the sample holder (often the front one) and the sample bank or reference in the reference holder (often the back one) simultaneously.";
+    document.getElementById("demo").innerHTML = "దశ-సంఖ్య 11: నమూనా హోల్డర్‌లో ఉంచడానికి కువెట్‌పై క్లిక్ చేయండి. ఈ కొలతలో నీటిని నమూనా ఖాళీగా లేదా సూచనగా ఉపయోగించాలి. ఇక్కడ డబుల్ బీమ్ స్పెక్ట్రోఫోటోమీటర్ చూపబడింది. ఈ సందర్భంలో, నమూనాను నమూనా హోల్డర్‌లో (తరచుగా ముందు ఒకటి) మరియు నమూనా బ్యాంక్ లేదా రిఫరెన్స్ హోల్డర్‌లో (తరచుగా వెనుకవైపు) ఒకేసారి ఉంచవచ్చు.";
     cursorPointers('spectrolid_trans_button', 'cuvette');
     step_no++;
   }
@@ -655,7 +655,7 @@ function spectrophotometer(){
     // Replace the spectrophotometer images with the closed spectrophotmeter images.
     images[0] = "images/spec_close.png";
     images[1] = "images/spec_close1.png";
-    document.getElementById("demo").innerHTML = "Step-No 13: Run the wavelength scan by clicking on the computer monitor and observe the wavelength scan.";
+    document.getElementById("demo").innerHTML = "దశ-సంఖ్య 13: కంప్యూటర్ మానిటర్‌పై క్లిక్ చేయడం ద్వారా తరంగదైర్ఘ్యం స్కాన్‌ను అమలు చేయండి మరియు తరంగదైర్ఘ్యం స్కాన్‌ను గమనించండి.";
     cursorPointers('spectrolid_trans_button', 'comp_trans_button');
     step_no++;
   }
@@ -742,6 +742,6 @@ function disposeGraph(){
         video is made hidden.*/
         $('#scan, .video').css('visibility', 'hidden');
         document.getElementById('disposegraph').style.cursor = 'default';
-        document.getElementById('demo').innerHTML= ' Click on Reset button to start new measurement.Repeat the measurement with next higher concentration and so on.';
+        document.getElementById('demo').innerHTML= 'క్రొత్త కొలతను ప్రారంభించడానికి రీసెట్ బటన్ పై క్లిక్ చేయండి. తదుపరి అధిక ఏకాగ్రతతో కొలతను పునరావృతం చేయండి.';
     }
 }

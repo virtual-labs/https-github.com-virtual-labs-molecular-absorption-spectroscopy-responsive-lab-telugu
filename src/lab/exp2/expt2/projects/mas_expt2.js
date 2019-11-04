@@ -34,7 +34,7 @@ window.onload = function(){
 /*This method is called when the page is loaded. It helps in providing basic functionality to 
 manual button and also sets the first set of instructions. */
 function initial_function(){
-      document.getElementById("demo").innerHTML = "Step-No 1:Prepare five 1 x 10<sup>-5</sup> M coumarin-138 solutions in solvents: cyclohexane, dioxane, acetonitrile, ethyl alcohol and ethylene glycol. Such dilute solutions can be prepared via dilution from 1 x 10<sup>-4</sup> M stock solutions in respective solvents. Here solutions in different solvents are shown on a solvent selection bar. To take a particular solution, click on the appropriate solvent on the solvent selection bar and then click on the volumetric flask containing the solution.";
+      document.getElementById("demo").innerHTML = "దశ-సంఖ్య 1: ద్రావకాలలో ఐదు 1 x 10 <sup> -5 </sup> M కూమరిన్ -138 పరిష్కారాలను సిద్ధం చేయండి: సైక్లోహెక్సేన్, డయాక్సేన్, అసిటోనిట్రైల్, ఇథైల్ ఆల్కహాల్ మరియు ఇథిలీన్ గ్లైకాల్. 1 x 10 <sup> -4 </sup> M ద్రావణాలలో M స్టాక్ సొల్యూషన్స్ నుండి పలుచన ద్వారా ఇటువంటి పలుచన పరిష్కారాలను తయారు చేయవచ్చు. ఇక్కడ వివిధ ద్రావకాలలోని పరిష్కారాలు ద్రావణి ఎంపిక పట్టీలో చూపబడతాయి. ఒక నిర్దిష్ట పరిష్కారం తీసుకోవడానికి, ద్రావణి ఎంపిక పట్టీపై తగిన ద్రావకంపై క్లిక్ చేసి, ఆపై ద్రావణాన్ని కలిగి ఉన్న వాల్యూమెట్రిక్ ఫ్లాస్క్‌పై క్లిక్ చేయండి."
       var modal = document.getElementById('manual');
       // Get the button that opens the manual modal
       var btn = document.getElementById("manual_button");
@@ -85,7 +85,7 @@ function setSolution(){
         document.getElementById("solution_name").src = "image-specific/solution4.png";
       }
       document.getElementById("round-bottom-flask").src = "image-specific/filled-round-bottom-flask.png";
-      document.getElementById("demo").innerHTML = "Step-No 2: Click on the volumetric flask containing the solution.";
+      document.getElementById("demo").innerHTML = "దశ-సంఖ్య 2: ద్రావణాన్ని కలిగి ఉన్న వాల్యూమెట్రిక్ ఫ్లాస్క్ పై క్లిక్ చేయండి.";
 }
 
 //This function is used to add click events to elements
@@ -205,7 +205,7 @@ function moveFlask(){
             document.getElementById("solution_name").style.visibility ="hidden";
             document.getElementById("slider").disabled = true;
             document.getElementById("slider").style.opacity = "0.4";   
-            document.getElementById("demo").innerHTML = "Step-No 3:Click on the quartz cuvette (path length 1x1cm) to take it to the instrument table. Quartz cuvettes for spectrophotometric measurements are transparent only on two opposite sides, unlke the  all-side transparent quartz cuvettes used for flourescence measurements.";
+            document.getElementById("demo").innerHTML = "స్టెప్-నో 3: ఇన్స్ట్రుమెంట్ టేబుల్‌కు తీసుకెళ్లడానికి క్వార్ట్జ్ క్యూవెట్ (పాత్ లెంగ్త్ 1x1 సెం.మీ) పై క్లిక్ చేయండి. స్పెక్ట్రోఫోటోమెట్రిక్ కొలతల కోసం క్వార్ట్జ్ క్యూవెట్స్ రెండు వ్యతిరేక వైపులా మాత్రమే పారదర్శకంగా ఉంటాయి, ఫ్లోరసెన్స్ కొలతలకు ఉపయోగించే ఆల్-సైడ్ పారదర్శక క్వార్ట్జ్ క్యూవెట్లను విడదీయండి.";
             cursorPointers('round-bottom-flask', 'quartz_cuvette');
             step_no++;
         }
@@ -230,7 +230,7 @@ function moveCuvette() {
         // Move it to the table.
         moveImage();
         // Change the next instruction to be followed.
-        document.getElementById("demo").innerHTML = "Step-No 4: Click on the 5ml capacity pipette to collect 3ml of the experimental solution which will be transferred into the quartz cuvette. In the real operation, one has to set up the volume to 3ml in the pipette and an appropriate tip should be attatched prior to dipping it in the solution.";
+        document.getElementById("demo").innerHTML = "దశ-సంఖ్య 4: ప్రయోగాత్మక ద్రావణంలో 3 మి.లీ సేకరించడానికి 5 ఎంఎల్ సామర్థ్యం గల పైపెట్‌పై క్లిక్ చేయండి, ఇది క్వార్ట్జ్ క్యూవెట్‌లోకి బదిలీ చేయబడుతుంది. నిజమైన ఆపరేషన్‌లో, వాల్యూమ్‌ను పైపెట్‌లో 3 ఎంఎల్‌కు సెటప్ చేయాలి మరియు ద్రావణంలో ముంచడానికి ముందు తగిన చిట్కా జతచేయాలి.";
         cursorPointers('quartz_cuvette', 'pipette');
         step_no++;
       }
@@ -322,13 +322,13 @@ function rotatePipette() {
         // Move the beaker image to desired position.
         moveImage();
         // Change to next intsruction to be followed.
-        document.getElementById("demo").innerHTML = "Step-No 5: Click on the pipette to draw solution into it.";
+        document.getElementById("demo").innerHTML = "దశ-సంఖ్య 5: పైపెట్ పై క్లిక్ చేసి దానిలో పరిష్కారం గీయండి.";
         step_no++;
       }
       else if(step_no == 3 && count == 3){
         elem.src = "image-specific/pipette-with-solution.png";
         document.getElementById('round-bottom-flask').src = "image-specific/half-filled-flask.png";
-        document.getElementById("demo").innerHTML = "Step-No 6: Click on the pipette to take it out of the volumetric flask.";
+        document.getElementById("demo").innerHTML = "స్టెప్-నం 6: వాల్యూమెట్రిక్ ఫ్లాస్క్ నుండి బయటకు తీయడానికి పైపెట్ పై క్లిక్ చేయండి.";
         step_no++;
         setTimeout(function(){ 
                 count++; }, 500);       
@@ -338,7 +338,7 @@ function rotatePipette() {
                       .animate({left: '280px'},"slow")
                       .animate({top: '230px'},"slow");
         // Change to next instruction to be followed.
-        document.getElementById("demo").innerHTML = "Step-No 7:Click on the pipette again to transfer the solution into the cuvette ";
+        document.getElementById("demo").innerHTML = "దశ-సంఖ్య 7: ద్రావణాన్ని క్యూవెట్‌లోకి బదిలీ చేయడానికి పైప్‌పై మళ్లీ క్లిక్ చేయండి";
         step_no ++;
         setTimeout(function(){ 
                 count++; }, 1000);
@@ -348,7 +348,7 @@ function rotatePipette() {
          $("#pipette").attr("src", "image-specific/pipette.png");
          $("#quartz_cuvette").attr("src", "image-specific/quartz-cuvette-with-solution.png");
         // Change to next instruction to be followed.
-        document.getElementById("demo").innerHTML = "Step-No 7:Click on the pipette again to transfer the solution into the cuvette ";
+        document.getElementById("demo").innerHTML = "దశ-సంఖ్య 7: ద్రావణాన్ని క్యూవెట్‌లోకి బదిలీ చేయడానికి పైప్‌పై మళ్లీ క్లిక్ చేయండి";
         step_no ++;
         setTimeout(function(){ 
                 movebackPipette();
@@ -382,7 +382,7 @@ function showInstruction() {
   if(step_no == 6){
       document.getElementById("scan").style.visibility = 'hidden';
       document.getElementById("start").style.visibility = 'hidden';
-      document.getElementById("demo").innerHTML = 'Step-No 9: Turn on the spectrometer clicking on the power button. In real operation it takes approx.30 min for initialization of the instrument.';
+      document.getElementById("demo").innerHTML = 'దశ-సంఖ్య 9: పవర్ బటన్ పై క్లిక్ చేయడం ద్వారా స్పెక్ట్రోమీటర్ ఆన్ చేయండి. నిజమైన ఆపరేషన్‌లో పరికరం ప్రారంభించడానికి సుమారు 30 నిమిషాలు పడుతుంది.';
       cursorPointers('start', 'power_trans_button');
       // Make the hidden power button to visible to run the spectrofluorimeter.  
       document.getElementById('power_trans_button').style.visibility = 'visible';
@@ -432,8 +432,8 @@ function showClock(){
 
 function removeClock() {
     $('#clockHand, #clockScreen').remove();
-    document.getElementById("demo").innerHTML = "Step-No 10: Click on the lid of the sample chamber of the spectrophotometer by clicking on the lid for placing the sample in the cell holder;"
-    cursorPointers('power_trans_button', 'spectrolid_trans_button');
+    document.getElementById("demo").innerHTML = "దశ-సంఖ్య 10: సెల్ హోల్డర్‌లో నమూనాను ఉంచడానికి మూతపై క్లిక్ చేయడం ద్వారా స్పెక్ట్రోఫోటోమీటర్ యొక్క నమూనా గది యొక్క మూతపై క్లిక్ చేయండి; "
+    కర్సర్ పాయింట్స్ ('పవర్_ట్రాన్స్_బటన్', 'స్పెక్ట్రోలిడ్_ట్రాన్స్_బటన్');
 }
 
 // First time its called to open the spectrophotometer
@@ -451,7 +451,7 @@ function spectrophotometer(){
         // Replace the spectrophotometer image-specific with the closed spectrophotmeter image-specific.
         images[0] = "image-specific/spec_close.png";
         images[1] = "image-specific/spec_close1.png";
-        document.getElementById("demo").innerHTML = "Step-No 12: Run the wavelength scan by clicking on the computer monitor and then on the scan button and observe the wavelength scan";
+        document.getElementById("demo").innerHTML = "దశ-సంఖ్య 12: కంప్యూటర్ మానిటర్‌పై క్లిక్ చేసి, ఆపై స్కాన్ బటన్‌పై క్లిక్ చేసి తరంగదైర్ఘ్యం స్కాన్‌ను అమలు చేయండి మరియు తరంగదైర్ఘ్యం స్కాన్‌ను గమనించండి";
         cursorPointers('quartz_cuvette', 'comp_trans_button');
         step_no++;
     }
@@ -463,7 +463,7 @@ function scan(){
     if(step_no==11){
         // After the cuvette are inserted into the spectrophotometer, when the computer in pressed to scan, depending on the cuvette choosen appropriate graph video is obtained.
         $(".data_validation, #instruction_bkgd, #graph_instruction").css("visibility", "visible");
-        document.getElementById("graph_instruction").innerHTML = " On the screen, enter the wavelength range. Start: 430 nm End: 275 nm. In real operation, the wavelength range of incident light for the sample is chosen and the wavelength scan is run via the accompanied computer software. One can run the scan in absorbance (A) or transmittance (%T) mode.";
+        document.getElementById("graph_instruction").innerHTML = "తెరపై, తరంగదైర్ఘ్యం పరిధిని నమోదు చేయండి. ప్రారంభం: 430 ఎన్ఎమ్ ముగింపు: 275 ఎన్ఎమ్. నిజమైన ఆపరేషన్‌లో, నమూనా కోసం సంఘటన కాంతి యొక్క తరంగదైర్ఘ్యం పరిధి ఎంచుకోబడుతుంది మరియు తరంగదైర్ఘ్యం స్కాన్ కంప్యూటర్ సాఫ్ట్‌వేర్ ద్వారా నడుస్తుంది. ఒకరు స్కాన్‌ను శోషక (ఎ) లేదా ట్రాన్స్మిటెన్స్ (% టి) మోడ్‌లో అమలు చేయవచ్చు.";
         step_no++;
         cursorPointers('comp_trans_button', 'start_btn');
     }
@@ -481,7 +481,7 @@ function startBtn(){
         if(solution== 0 &&  input1 == 430 && input2 == 275){
             $(".data_validation").css("visibility", "hidden");
             $("#scan, #video1").css("visibility", "visible");
-            document.getElementById("graph_instruction").innerHTML = "Step-No 14:Click on the close button when the spectral scal is complete. In real operation, the scan data are stored in the computer. The instrument stores data and therefore asks for the Sample File name. One enters a file name to save the data.";
+            document.getElementById("graph_instruction").innerHTML = "దశ-సంఖ్య 14: స్పెక్ట్రల్ స్కేల్ పూర్తయినప్పుడు క్లోజ్ బటన్ పై క్లిక్ చేయండి. నిజమైన ఆపరేషన్‌లో, స్కాన్ డేటా కంప్యూటర్‌లో నిల్వ చేయబడుతుంది. వాయిద్యం డేటాను నిల్వ చేస్తుంది మరియు అందువల్ల నమూనా ఫైల్ పేరును అడుగుతుంది. డేటాను సేవ్ చేయడానికి ఒకరు ఫైల్ పేరును నమోదు చేస్తారు.";
             video1.play();
             step_no++;
             cursorPointers('start_btn', 'disposegraph');
@@ -489,7 +489,7 @@ function startBtn(){
         else if(solution == 1 && input1 == 430 && input2 == 275){
             $(".data_validation").css("visibility", "hidden");
             $("#scan, #video2").css("visibility", "visible");
-            document.getElementById("graph_instruction").innerHTML = "Step-No 14:Click on the close button when the spectral scal is complete. In real operation, the scan data are stored in the computer. The instrument stores data and therefore asks for the Sample File name. One enters a file name to save the data.";
+            document.getElementById("graph_instruction").innerHTML = "దశ-సంఖ్య 14: స్పెక్ట్రల్ స్కేల్ పూర్తయినప్పుడు క్లోజ్ బటన్ పై క్లిక్ చేయండి. నిజమైన ఆపరేషన్‌లో, స్కాన్ డేటా కంప్యూటర్‌లో నిల్వ చేయబడుతుంది. వాయిద్యం డేటాను నిల్వ చేస్తుంది మరియు అందువల్ల నమూనా ఫైల్ పేరును అడుగుతుంది. డేటాను సేవ్ చేయడానికి ఒకరు ఫైల్ పేరును నమోదు చేస్తారు.";
             video2.play();
             step_no++;
             cursorPointers('start_btn', 'disposegraph');
@@ -497,7 +497,7 @@ function startBtn(){
         else if(solution == 2 && input1 == 430 && input2 == 275){
             $(".data_validation").css("visibility", "hidden");
             $("#scan, #video3").css("visibility", "visible");
-            document.getElementById("graph_instruction").innerHTML = "Step-No 14:Click on the close button when the spectral scal is complete. In real operation, the scan data are stored in the computer. The instrument stores data and therefore asks for the Sample File name. One enters a file name to save the data.";
+            document.getElementById("graph_instruction").innerHTML = "దశ-సంఖ్య 14: స్పెక్ట్రల్ స్కేల్ పూర్తయినప్పుడు క్లోజ్ బటన్ పై క్లిక్ చేయండి. నిజమైన ఆపరేషన్‌లో, స్కాన్ డేటా కంప్యూటర్‌లో నిల్వ చేయబడుతుంది. వాయిద్యం డేటాను నిల్వ చేస్తుంది మరియు అందువల్ల నమూనా ఫైల్ పేరును అడుగుతుంది. డేటాను సేవ్ చేయడానికి ఒకరు ఫైల్ పేరును నమోదు చేస్తారు.";
             video3.play();
             step_no++;
             cursorPointers('start_btn', 'disposegraph');
@@ -505,7 +505,7 @@ function startBtn(){
         else if(solution == 3 && input1 == 430 && input2 == 275){
             $(".data_validation").css("visibility", "hidden");
             $("#scan, #video4").css("visibility", "visible");
-            document.getElementById("graph_instruction").innerHTML = "Step-No 14:Click on the close button when the spectral scal is complete. In real operation, the scan data are stored in the computer. The instrument stores data and therefore asks for the Sample File name. One enters a file name to save the data.";
+            document.getElementById("graph_instruction").innerHTML = "దశ-సంఖ్య 14: స్పెక్ట్రల్ స్కేల్ పూర్తయినప్పుడు క్లోజ్ బటన్ పై క్లిక్ చేయండి. నిజమైన ఆపరేషన్‌లో, స్కాన్ డేటా కంప్యూటర్‌లో నిల్వ చేయబడుతుంది. వాయిద్యం డేటాను నిల్వ చేస్తుంది మరియు అందువల్ల నమూనా ఫైల్ పేరును అడుగుతుంది. డేటాను సేవ్ చేయడానికి ఒకరు ఫైల్ పేరును నమోదు చేస్తారు.";
             video4.play();
             step_no++;
             cursorPointers('start_btn', 'disposegraph');
@@ -513,13 +513,13 @@ function startBtn(){
         else if(solution == 4 && input1 == 430 && input2 == 275){
             $(".data_validation").css("visibility", "hidden");
             $("#scan, #video5").css("visibility", "visible");
-            document.getElementById("graph_instruction").innerHTML = "Step-No 14:Click on the close button when the spectral scal is complete. In real operation, the scan data are stored in the computer. The instrument stores data and therefore asks for the Sample File name. One enters a file name to save the data.";
+            document.getElementById("graph_instruction").innerHTML = "పూర్తయినప్పుడు క్లోజ్ బటన్ పై క్లిక్ చేయండి. నిజమైన ఆపరేషన్‌లో, స్కాన్ డేటా కంప్యూటర్‌లో నిల్వ చేయబడుతుంది. వాయిద్యం డేటాను నిల్వ చేస్తుంది మరియు అందువల్ల నమూనా ఫైల్ పేరును అడుగుతుంది. డేటాను సేవ్ చేయడానికి ఒకరు ఫైల్ పేరును నమోదు చేస్తారు.";
             video5.play();
             step_no++;
             cursorPointers('start_btn', 'disposegraph');
         }
         else{
-            alert("Enter start and end values and click start button on top of the window");
+            alert("ప్రారంభ మరియు ముగింపు విలువలను నమోదు చేసి, విండో పైన ఉన్న ప్రారంభ బటన్ క్లిక్ చేయండి");
         }
 }
 
@@ -528,6 +528,6 @@ function disposeGraph(){
     if(step_no == 13) {
         // After playing the graph plotting video close option is choosen, the background scan image and the video is made hidden.
         $('.video, .common').css('visibility', 'hidden');
-        document.getElementById('demo').innerHTML = 'Click on Reset button to start over the measurements.';
+        document.getElementById('demo').innerHTML = 'కొలతలను ప్రారంభించడానికి రీసెట్ బటన్ పై క్లిక్ చేయండి.';
     }
 }
